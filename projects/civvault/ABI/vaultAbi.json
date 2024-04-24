@@ -1,0 +1,222 @@
+{
+    "getStrategy": {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getStrategyInfo",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "contract IERC20",
+              "name": "assetToken",
+              "type": "address"
+            },
+            {
+              "internalType": "contract IERC20",
+              "name": "guaranteeToken",
+              "type": "address"
+            },
+            {
+              "internalType": "contract ICivFundRT",
+              "name": "fundRepresentToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "guaranteeFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxDeposit",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maxUsers",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minDeposit",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "epochDuration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lockPeriod",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "feeDuration",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastFeeDistribution",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastProcessedEpoch",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "watermark",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "pendingFees",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "withdrawAddress",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address",
+              "name": "investAddress",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "initialized",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "paused",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct StrategyInfo",
+          "name": "strategy",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "strategiesCounter": {
+      "inputs": [],
+      "name": "strategiesCounter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "getCurrentEpoch":{
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            }
+        ],
+        "name": "getCurrentEpoch",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    "getEpochInfo":     {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_id",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_index",
+                "type": "uint256"
+            }
+        ],
+        "name": "getEpochInfo",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "totDepositors",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "totDepositedAssets",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "totWithdrawnShares",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "VPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "newShares",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "currentWithdrawAssets",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "epochStartTime",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "lastDepositorProcessed",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "duration",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct EpochInfo",
+                "name": "epoch",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+  }
+  
